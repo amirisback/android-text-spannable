@@ -6,6 +6,7 @@ import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import android.util.Log
 import androidx.activity.viewModels
+import androidx.core.content.ContextCompat
 import com.frogobox.research.R
 import com.frogobox.research.core.BaseBindActivity
 import com.frogobox.research.databinding.ActivityMainBinding
@@ -39,7 +40,7 @@ class MainActivity : BaseBindActivity<ActivityMainBinding>() {
             val simpleText = "Nama : Faisal Amir"
             val tagName = "Faisal Amir"
 
-            tvText.text = simpleText.setColouredSpan(tagName, R.color.teal_700)
+            tvText.text = simpleText.setColouredSpan(tagName, ContextCompat.getColor(this@MainActivity, R.color.teal_700))
         }
     }
 
